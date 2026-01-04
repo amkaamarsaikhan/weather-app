@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather App</h1>
+            <p id="currentDate" class="date-display"></p>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <div class="input-group">
+                    <input type="text" id="cityInput" placeholder="Хотын нэр (Жишээ нь: Ulaanbaatar)"
+                        autocomplete="off">
+                    <button id="fetchBtn" class="btn-primary">Хайх</button>
+                    <button id="clearBtn" class="btn-secondary">Цэвэрлэх</button>
+                </div>
+            </section>
+
+            <section class="result-section" id="resultSection">
+                <div class="placeholder">Хотын нэр оруулж хайлт хийнэ үү.</div>
+            </section>
+
+            <section class="info-section">
+                <button id="testApiBtn" class="btn-outline">JSONPlaceholder Test</button>
+                <div id="apiTestResult"></div>
+            </section>
+            <section class="info-section">
+                <h2>Learning Points</h2>
+                <div class="info-cards">
+                    <div class="card">
+                        <h3>Fetch API Basics</h3>
+                        <p>Fetch API Basics: Энэ нь вэб хөтөчөөс сервер рүү хүсэлт илгээх үндсэн хэрэгсэл юм. Энэ нь
+                            үргэлж Promise буюу "амлалт" буцаадаг.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Async/Await</h3>
+                        <p>Async/Await: Энэ нь олон дамжлагатай Promise-ийг илүү хялбар, яг л ердийн код шиг
+                            дарааллуулан уншигдахаар бичих боломжийг олгодог орчин үеийн арга юм.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Error Handling</h3>
+                        <p>Error Handling: API хүсэлт илгээх үед интернэт тасрах эсвэл буруу хот хайх зэрэг алдаа гарч
+                            болно. Тиймээс try/catch блок ашиглан алдааг ухаалгаар зохицуулах хэрэгтэйг сануулж байна.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>PRACTICE EXERCISES</h3>
+                        <p>1. Хотын нэр хоосон үед алдаа шалгах (error handling) нэмэх<br>
+                            2.Ачаалж байгааг харуулах spinner (loading animation) нэмэх<br>
+                            3. Өөр API-оос өгөгдөл татах (жишээ нь: JSONPlaceholder)<br>
+                            4. Цаг агаарын нэмэлт мэдээлэл нэмэх (агаарын даралт, харагдах орчин гэх мэт)<br>
+                            5. Сүүлд хайсан хотыг localStorage-д хадгалах<br>
+                            6. Хайлт цэвэрлэх "Clear" товч нэмэх<br>
+                            7. Олон хотын цаг агаарын мэдээллийг нэг дор татаж харуулах<br>
+                            8. Буруу хотын нэр оруулахад алдаа боловсруулах<br>
+                            9. Огноо, цагийг форматлах функц үүсгэх<br>
+                            10. Цаг агаарын өөр өөр нөхцөлд тохирсон icon (дүрс) нэмэх
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Сүүлд хайсан: <span id="lastSearched">Байхгүй</span></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
