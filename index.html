@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="mn">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -19,52 +19,50 @@
         <main>
             <section class="search-section">
                 <div class="input-group">
-                    <input type="text" id="cityInput" placeholder="Хотын нэр (Жишээ нь: Ulaanbaatar)"
+                    <input type="text" id="cityInput" placeholder="City name (e.g. London)"
                         autocomplete="off">
-                    <button id="fetchBtn" class="btn-primary">Хайх</button>
-                    <button id="clearBtn" class="btn-secondary">Цэвэрлэх</button>
+                    <button id="fetchBtn" class="btn-primary">Search</button>
+                    <button id="clearBtn" class="btn-secondary">Clear</button>
                 </div>
             </section>
 
             <section class="result-section" id="resultSection">
-                <div class="placeholder">Хотын нэр оруулж хайлт хийнэ үү.</div>
+                <div class="placeholder">Enter a city name to search.</div>
             </section>
 
             <section class="info-section">
-                <button id="testApiBtn" class="btn-outline">JSONPlaceholder Test</button>
+                <button id="testApiBtn" class="btn-outline">Test JSONPlaceholder API</button>
                 <div id="apiTestResult"></div>
             </section>
+
             <section class="info-section">
                 <h2>Learning Points</h2>
                 <div class="info-cards">
                     <div class="card">
                         <h3>Fetch API Basics</h3>
-                        <p>Fetch API Basics: Энэ нь вэб хөтөчөөс сервер рүү хүсэлт илгээх үндсэн хэрэгсэл юм. Энэ нь
-                            үргэлж Promise буюу "амлалт" буцаадаг.</p>
+                        <p>A tool for sending network requests from the browser. It always returns a Promise.</p>
                     </div>
                     <div class="card">
                         <h3>Async/Await</h3>
-                        <p>Async/Await: Энэ нь олон дамжлагатай Promise-ийг илүү хялбар, яг л ердийн код шиг
-                            дарааллуулан уншигдахаар бичих боломжийг олгодог орчин үеийн арга юм.</p>
+                        <p>Modern syntax that makes asynchronous code look and behave like synchronous code.</p>
                     </div>
                     <div class="card">
                         <h3>Error Handling</h3>
-                        <p>Error Handling: API хүсэлт илгээх үед интернэт тасрах эсвэл буруу хот хайх зэрэг алдаа гарч
-                            болно. Тиймээс try/catch блок ашиглан алдааг ухаалгаар зохицуулах хэрэгтэйг сануулж байна.
-                        </p>
+                        <p>Using try/catch blocks to gracefully handle network issues or invalid search results.</p>
                     </div>
                     <div class="card">
                         <h3>PRACTICE EXERCISES</h3>
-                        <p>1. Хотын нэр хоосон үед алдаа шалгах (error handling) нэмэх<br>
-                            2.Ачаалж байгааг харуулах spinner (loading animation) нэмэх<br>
-                            3. Өөр API-оос өгөгдөл татах (жишээ нь: JSONPlaceholder)<br>
-                            4. Цаг агаарын нэмэлт мэдээлэл нэмэх (агаарын даралт, харагдах орчин гэх мэт)<br>
-                            5. Сүүлд хайсан хотыг localStorage-д хадгалах<br>
-                            6. Хайлт цэвэрлэх "Clear" товч нэмэх<br>
-                            7. Олон хотын цаг агаарын мэдээллийг нэг дор татаж харуулах<br>
-                            8. Буруу хотын нэр оруулахад алдаа боловсруулах<br>
-                            9. Огноо, цагийг форматлах функц үүсгэх<br>
-                            10. Цаг агаарын өөр өөр нөхцөлд тохирсон icon (дүрс) нэмэх
+                        <p>
+                            1. Add input validation<br>
+                            2. Add a loading spinner animation<br>
+                            3. Fetch from JSONPlaceholder<br>
+                            4. Add pressure and visibility data<br>
+                            5. Save last search to localStorage<br>
+                            6. Implement "Clear History" button<br>
+                            7. Support multiple search results<br>
+                            8. Handle "City Not Found" errors<br>
+                            9. Create a date formatting function<br>
+                            10. Add dynamic weather icons
                         </p>
                     </div>
                 </div>
@@ -72,11 +70,10 @@
         </main>
 
         <footer>
-            <p>Сүүлд хайсан: <span id="lastSearched">Байхгүй</span></p>
+            <p>Last Searched: <span id="lastSearched">None</span></p>
         </footer>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
