@@ -160,9 +160,10 @@ if (testApiBtn) {
 }
 
 // Event Listeners
-if (fetchBtn) {
-    fetchBtn.addEventListener('click', () => fetchWeatherData(cityInput.value.trim()));
-}
+fetchBtn.addEventListener('click', () => {
+    fetchWeatherData(cityInput.value.trim());
+    cityInput.value = '';
+});
 
 if (cityInput) {
     cityInput.addEventListener('keypress', (e) => {
